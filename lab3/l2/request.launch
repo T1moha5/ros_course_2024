@@ -1,0 +1,9 @@
+<launch>
+    <param name="param1" value="1.0" />
+    <param name="param2" value="2.0" />
+	<param name="param3" value="3.0" />
+	<group ns="new_us">
+		<node name="polynomia" pkg="study_pkg" type="polynomia.py" output="screen"/>
+		<node name="summing" pkg="study_pkg" type="summing.py" output="screen"/>
+	</group>
+</launch>

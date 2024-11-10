@@ -1,0 +1,14 @@
+<launch>
+	<arg name="new_topic_name" default="new_chatter" />
+
+	<group ns="new_us">
+	
+		<include file="$(find study_pkg)/lab3/l1/another_one.launch"/>	
+		<node name="reciver" pkg="study_pkg" type="reciver.py" output="screen">
+			<remap from="my_chat_topic" to="$(arg new_topic_name)"/>
+		</node>
+		<node name="sender" pkg="study_pkg" type="sender.py" output="screen">
+			<remap from="my_chat_topic" to="$(arg new_topic_name)"/>
+		</node>
+	</group>
+</launch>
