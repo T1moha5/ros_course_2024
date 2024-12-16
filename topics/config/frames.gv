@@ -1,0 +1,9 @@
+digraph G {
+"map" -> "odom"[label="Broadcaster: /gmapping\nAverage rate: 40.202 Hz\nMost recent transform: 433.215 ( -0.023 sec old)\nBuffer length: 4.950 sec\n"];
+"odom" -> "base_footprint"[label="Broadcaster: /gazebo\nAverage rate: 30.199 Hz\nMost recent transform: 433.191 ( 0.001 sec old)\nBuffer length: 4.967 sec\n"];
+"base_footprint" -> "base_scan"[label="Broadcaster: /base_footprint_2_base_link\nAverage rate: 10.194 Hz\nMost recent transform: 433.241 ( -0.049 sec old)\nBuffer length: 4.905 sec\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 433.192"[ shape=plaintext ] ;
+ }->"map";
+}
